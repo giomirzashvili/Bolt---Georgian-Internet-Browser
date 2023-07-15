@@ -1,5 +1,5 @@
 # Bolt---Georgian-Internet-Browser
-
+![lightnin](https://github.com/giomirzashvili/Bolt---Georgian-Internet-Browser/assets/127424884/d8b9a28c-029e-40c7-9cf2-08775143c8c6)
 Bolt - Georgian Internet Browser
 Bolt is a fast and lightweight web browser designed specifically for Georgian internet users. It provides a seamless browsing experience with a user-friendly interface and essential features to enhance your web exploration.
 
@@ -14,5 +14,11 @@ Tab Management: Add new tabs with a single click, close tabs as needed, and swit
 Future Expansion: Bolt is a growing project with the potential for future enhancements and new features. Our dedicated team is actively working to improve the browsing experience and add additional functionality based on user feedback and emerging technologies.
 Georgian Localization: Bolt is designed to cater specifically to Georgian internet users, with a focus on language support and localization features.
 Bolt aims to provide a reliable and efficient browsing experience tailored to the needs of Georgian users. It combines simplicity and performance to ensure effortless web exploration, keeping you connected and informed in the digital world.
+
+
+To install Bolt web browser, run the following command:
+```bash
+pyinstaller --onefile --noconsole bolt.py
+```
 
 Please note that Bolt is an open-source project, and contributions from the developer community are encouraged. Together, we can shape the future of Bolt and make it a go-to browser for Georgian internet users.
