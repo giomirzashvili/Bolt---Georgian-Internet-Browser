@@ -7,13 +7,13 @@ class BrowserWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Bolt")
-        self.setGeometry(100, 100, 800, 600) 
+        self.setWindowTitle("Bolt - ქართული ბრაუზერი")
+        self.setGeometry(100, 100, 800, 600)  # Set a larger window size
 
         # Create the address bar and go button
         self.address_bar = QLineEdit()
-        self.go_button = QPushButton("Go")
-        self.go_button.setFixedWidth(50) 
+        self.go_button = QPushButton("ძებნა")
+        self.go_button.setFixedWidth(50)  # Adjust the width of the Go button
 
         # Create the web view
         self.webview = QWebEngineView()
@@ -25,22 +25,23 @@ class BrowserWindow(QMainWindow):
 
         # Create the button to add new tabs
         self.new_tab_button = QPushButton()
-        self.new_tab_button_label = QLabel("+")
-        self.new_tab_button_label.setStyleSheet("font-size: 20px; font-weight: bold;")
-        self.new_tab_button.setFixedSize(25, 25)  # Adjust the size of the button
+        self.new_tab_button_label = QLabel("ფანჯრის დამატება")
+        self.new_tab_button_label.setStyleSheet("font-size: 12px; font-weight: 800;")
+        self.new_tab_button.setFixedSize(135, 23)  # Adjust the size of the button
         self.new_tab_button_layout = QHBoxLayout()
         self.new_tab_button_layout.addWidget(self.new_tab_button_label)
         self.new_tab_button_layout.setContentsMargins(0, 0, 0, 0)
         self.new_tab_button_layout.setAlignment(self.new_tab_button_label.alignment())
         self.new_tab_button.setLayout(self.new_tab_button_layout)
-        self.new_tab_button.setToolTip("New Tab") 
+        self.new_tab_button.setToolTip("ახალი ფანჯარა")  # Add a tooltip for the button
 
         # Set up the layout
         layout = QVBoxLayout()
-        address_layout = QHBoxLayout()  
+        address_layout = QHBoxLayout()  # Separate layout for the address bar and Go button
         address_layout.addWidget(self.address_bar)
         address_layout.addWidget(self.go_button)
-        address_layout.addWidget(self.new_tab_button) 
+        address_layout.addWidget(self.new_tab_button)  # Add the new tab button to the address layout
+
         layout.addLayout(address_layout)
         layout.addWidget(self.tab_widget)
 
@@ -59,7 +60,7 @@ class BrowserWindow(QMainWindow):
     def add_tab(self):
         webview = QWebEngineView()
         webview.loadFinished.connect(self.update_tab_title)
-        tab_index = self.tab_widget.addTab(webview, "New Tab")
+        tab_index = self.tab_widget.addTab(webview, "ახალი ფანჯარა")
         self.tab_widget.setCurrentIndex(tab_index)
 
     def close_tab(self, tab_index):
@@ -96,13 +97,13 @@ class BrowserWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Bolt")
-        self.setGeometry(100, 100, 800, 600)  
+        self.setWindowTitle("Bolt - ქართული ბრაუზერი")
+        self.setGeometry(100, 100, 800, 600)  # Set a larger window size
 
         # Create the address bar and go button
         self.address_bar = QLineEdit()
-        self.go_button = QPushButton("Go")
-        self.go_button.setFixedWidth(50) 
+        self.go_button = QPushButton("ძებნა")
+        self.go_button.setFixedWidth(50)  # Adjust the width of the Go button
 
         # Create the web view
         self.webview = QWebEngineView()
@@ -114,7 +115,7 @@ class BrowserWindow(QMainWindow):
 
         # Create the button to add new tabs
         self.new_tab_button = QPushButton()
-        self.new_tab_button_label = QLabel("New Tab")
+        self.new_tab_button_label = QLabel("ახალი ფანჯარა")
         self.new_tab_button_label.setStyleSheet("font-size: 15px; font-weight: italic;")
         self.new_tab_button.setFixedSize(40, 45)  # Adjust the size of the button
         self.new_tab_button_layout = QHBoxLayout()
@@ -122,14 +123,14 @@ class BrowserWindow(QMainWindow):
         self.new_tab_button_layout.setContentsMargins(0, 0, 0, 0)
         self.new_tab_button_layout.setAlignment(self.new_tab_button_label.alignment())
         self.new_tab_button.setLayout(self.new_tab_button_layout)
-        self.new_tab_button.setToolTip("New Tab")  # Add a tooltip for the button
+        self.new_tab_button.setToolTip("ახალი ფანჯარა")  # Add a tooltip for the button
 
         # Set up the layout
         layout = QVBoxLayout()
         address_layout = QHBoxLayout()  # Separate layout for the address bar and Go button
         address_layout.addWidget(self.address_bar)
         address_layout.addWidget(self.go_button)
-        address_layout.addWidget(self.new_tab_button) 
+        address_layout.addWidget(self.new_tab_button)  # Add the new tab button to the address layout
 
         layout.addLayout(address_layout)
         layout.addWidget(self.tab_widget)
@@ -149,7 +150,7 @@ class BrowserWindow(QMainWindow):
     def add_tab(self):
         webview = QWebEngineView()
         webview.loadFinished.connect(self.update_tab_title)
-        tab_index = self.tab_widget.addTab(webview, "New Tab")
+        tab_index = self.tab_widget.addTab(webview, "ახალი ფანჯარა")
         self.tab_widget.setCurrentIndex(tab_index)
 
     def close_tab(self, tab_index):
