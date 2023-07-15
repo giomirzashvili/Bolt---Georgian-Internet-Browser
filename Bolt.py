@@ -8,12 +8,12 @@ class BrowserWindow(QMainWindow):
         super().__init__()
 
         self.setWindowTitle("Bolt")
-        self.setGeometry(100, 100, 800, 600)  # Set a larger window size
+        self.setGeometry(100, 100, 800, 600) 
 
         # Create the address bar and go button
         self.address_bar = QLineEdit()
         self.go_button = QPushButton("Go")
-        self.go_button.setFixedWidth(50)  # Adjust the width of the Go button
+        self.go_button.setFixedWidth(50) 
 
         # Create the web view
         self.webview = QWebEngineView()
@@ -33,15 +33,14 @@ class BrowserWindow(QMainWindow):
         self.new_tab_button_layout.setContentsMargins(0, 0, 0, 0)
         self.new_tab_button_layout.setAlignment(self.new_tab_button_label.alignment())
         self.new_tab_button.setLayout(self.new_tab_button_layout)
-        self.new_tab_button.setToolTip("New Tab")  # Add a tooltip for the button
+        self.new_tab_button.setToolTip("New Tab") 
 
         # Set up the layout
         layout = QVBoxLayout()
-        address_layout = QHBoxLayout()  # Separate layout for the address bar and Go button
+        address_layout = QHBoxLayout()  
         address_layout.addWidget(self.address_bar)
         address_layout.addWidget(self.go_button)
-        address_layout.addWidget(self.new_tab_button)  # Add the new tab button to the address layout
-
+        address_layout.addWidget(self.new_tab_button) 
         layout.addLayout(address_layout)
         layout.addWidget(self.tab_widget)
 
@@ -98,12 +97,12 @@ class BrowserWindow(QMainWindow):
         super().__init__()
 
         self.setWindowTitle("Bolt")
-        self.setGeometry(100, 100, 800, 600)  # Set a larger window size
+        self.setGeometry(100, 100, 800, 600)  
 
         # Create the address bar and go button
         self.address_bar = QLineEdit()
         self.go_button = QPushButton("Go")
-        self.go_button.setFixedWidth(50)  # Adjust the width of the Go button
+        self.go_button.setFixedWidth(50) 
 
         # Create the web view
         self.webview = QWebEngineView()
@@ -130,7 +129,7 @@ class BrowserWindow(QMainWindow):
         address_layout = QHBoxLayout()  # Separate layout for the address bar and Go button
         address_layout.addWidget(self.address_bar)
         address_layout.addWidget(self.go_button)
-        address_layout.addWidget(self.new_tab_button)  # Add the new tab button to the address layout
+        address_layout.addWidget(self.new_tab_button) 
 
         layout.addLayout(address_layout)
         layout.addWidget(self.tab_widget)
